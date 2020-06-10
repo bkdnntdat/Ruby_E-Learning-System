@@ -1,73 +1,31 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Study  A Education category Flat bootstrap Responsive  Website Template | Home :: w3layouts</title>
-
+<title>Study  A Education category Flat bootstrap Responsive  Website Template</title>
+<!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+jQuery (necessary for Bootstrap's JavaScript plugins)
+Custom Theme files
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/> -->
 <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<%# <script src="js/jquery-1.11.0.min.js"></script> %>
-<%# <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Study Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" /> %>
-<%# <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--Google Fonts-->
-<!-- start-smoth-scrolling -->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-	<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-	</script> %>
-<!-- //end-smoth-scrolling -->
-<%# <script src="js/menu_jquery.js"></script> %>
+<!-- Custom Theme files -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <!--header start here-->
 <div class="header">
 	<div class="container">
 		 <div class="header-main">
-				<!---->
-					<div class="header-logo">
-						<div class="logo">
-						<a href="index.html">
-                            <%= image_tag("lo1.png") %>
-                        </a>
-						</div>
-						<div class="top-nav">
-							<span class="icon"><%= image_tag("menu.png") %> </span>
-							<ul>
-								<li ><a href="index.html">Home</a> </li>
-								<li ><a href="about.html" >About  </a> </li>
-								<li><a href="typo.html"  >Short Codes</a></li>
-								<li><a href="galley.html" >Gallery</a></li>
-								<li><a href="contact.html" >Contact </a></li>
-							</ul>
-							<!--script-->
-						<!-- <script>
-										$("span.icon").click(function(){
-											$(".top-nav ul").slideToggle(500, function(){
-											});
-										});
-														</script>	 -->			
-				</div>
-				<div class="clearfix"> </div>
-					</div>
-			<!---->
-			<div class="top-menu">					
+			<div class="top-menu marginMe">					
 					<ul>
-						<li ><a href="index.html" >Home</a> </li>
+						<li ><a href="index.html">Home</a> </li>
 						<li ><a href="about.html">About  </a> </li>
 						<li><a href="typo.html">Short Codes</a></li>
-						<li><a href="index.html"> <%= image_tag("lo1.png") %> </a></li>
 						<li><a href="galley.html">Gallery </a></li>
 						<li><a href="contact.html">Contact</a></li>
 						<li><div class="header-login">
@@ -83,8 +41,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 					<!--script-->
 			<div class="bann-bottom">
-				<h1>Nemo voluptatem quia voluptas</h1>
-				<p>Porro Neque quisquam dolorem ipsum </p>
+				<h1 style="color: bisque; font-size: 62px;">Tự học để phát triển năng lực và phẩm chất</h1>
+				<p style="color: bisque; font-size: 20px; margin-top: 28px;">Học, Học nữa, Học mãi</p>
 				<div class="bann-main">
 					<div class="col-md-4 bann-grid">
 						<%= image_tag("i1.png") %>
@@ -106,32 +64,45 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--header end here-->
 <!--baner-info start here-->
-<div class="banner-info">
+<div class="banner-info headerMe">			
 	<div class="container">
 		<div class="banner-info-main">
-			<div class="col-md-6 bann-info-left">
-				<p>Category old</p>
-			</div>
-			<div class="col-md-6 bann-info-left">
-				<p>Category new</p>
+			<div class="col-md-12 bann-info-left borderMe">
+				<p><strong style="font-size: 30px; color: antiquewhite;">CATEGORY</strong></p>
+				<table class="table table-dark table-striped">
+				    <thead>
+				      <tr>
+				        <th>STT</th>
+				        <th>Name</th>
+				        <th>Language</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>1</td>
+				        <td>Cây Cối</td>
+				        <td>English</td>
+				      </tr>
+				      <tr>
+				        <td>2</td>
+				        <td>Động Vật</td>
+				        <td>Japanese</td>
+				      </tr>
+				      <tr>
+				        <td>3</td>
+				        <td>Xe cộ</td>
+				        <td>Vietnamese</td>
+				      </tr>
+				    </tbody>
+				  </table>
 			</div>
 		  <div class="clearfix"> </div>
 		</div>
-		<div class="bann-info-btn"><a href="single.html" class="hvr-bounce-to-right">Read More</a></div>
 	</div>
 </div>
 <!--banner-info end here-->
 <!--testimonal start here-->
-<div class="testimonal">
-	<div class="container">
-		<div class="testimonal-main">
-			 <h2>Nor again anyone who loves  pursues desires</h2>
-			 <a href="single.html" class="hvr-bounce-to-right  testimo-btn">Read More</a>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
-</div>
-<!--testimonal end here-->
-<!--copyright end here-->
+<!--banner-info end here-->
+<!--testimonal start here-->
 </body>
 </html>

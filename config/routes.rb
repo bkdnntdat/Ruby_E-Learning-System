@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
   resources :users
-  resources :categories
-  resources :words
   root :to => "home#index"
   
   get "signup" => "signup#index"
