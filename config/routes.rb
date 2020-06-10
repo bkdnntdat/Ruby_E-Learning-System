@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users
   root :to => "home#index"
   
-  get "signup" => "signup#index"
+  get "signup" => "users#new"
 
   get "login1" => "login#index"
 

@@ -268,9 +268,8 @@ iframe {
 
   position: absolute;
   top: 14px;
-  left: -105px;
   width: 80px;
-
+  left: -105px;
 }
 
 /*---------------------------------------------*/
@@ -280,8 +279,8 @@ iframe {
   color: #555555;
   line-height: 1.2;
 
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: 70%;
   background: transparent;
   padding: 0 5px;
 }
