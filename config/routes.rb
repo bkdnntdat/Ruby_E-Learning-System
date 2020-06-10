@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   
   get "signup" => "users#new"
 
-  get "login1" => "login#index"
-
   get "home" => "home#index"
 
   get     "login"    => "sessions#new"
