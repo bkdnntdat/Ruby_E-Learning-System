@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <%= form_for @user, url: users_path do |u| %>
+      <div class="limiter">
+        <div class="container-login100">
+          <div class="wrap-login100">
+            <div class="login100-form-title" style="background-image: url(/assets/bg-01-f49138dff2e408e75c496680b3d0994baefcb220c821013f18429ebd15080682.jpg);">
+              <span class="login100-form-title-1">
+                Sign Up
+              </span>
+            </div>
+            <form class="login100-form container">
+              <div class="wrap-input100 validate-input m-b-18">
+                <%= u.label :username, class: "label-input100" %>
+                <%= u.text_field :username, class: "input100", placeholder: "Enter username" %>
+              </div>
+              <div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+                <%= u.label :password, class: "label-input100" %>
+                <%= u.text_field :password, class: "input100", placeholder: "Enter password", type: "password" %>
+              </div>
+              <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                <%= u.label :firstName, class: "label-input100" %>
+                <%= u.text_field :firstName, class: "input100", placeholder: "Enter first name"%>
+              </div>
+              <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                <%= u.label :lastName, class: "label-input100" %>
+                <%= u.text_field :lastName, class: "input100", placeholder: "Enter last name"%>
+              </div>
+              <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                <%= u.label :email, class: "label-input100" %>
+                <%= u.text_field :email, class: "input100", placeholder: "Enter email"%>
+              </div>
+              <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                <%= u.label :dateOfBirth, class: "label-input100" %>
+                <%= u.text_field :dateOfBirth, class: "input100", placeholder: "Enter date of birth"%>
+              </div>
+              <div class="flex-sb-m w-full p-b-30">
+                <p></p>
+                <p></p>
+                <p></p>
+                <a href="login" class="txt1">
+                  Login Here!!!
+                </a>
+              </div>
+              <div class="container-login100-form-btn">
+                <button class="login100-form-btn">
+                  Sign Up
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      <% end %>
+    </body>
