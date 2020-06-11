@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="limiter">
+      <div class="container-login100">
+        <div class="wrap-login100">
+          <div class="login100-form-title" style="background-image: url(/assets/bg-01-f49138dff2e408e75c496680b3d0994baefcb220c821013f18429ebd15080682.jpg);">
+            <span class="login100-form-title-1">
+              Sign In
+            </span>
+          </div>
+          <div class="login100-form validate-form">
+            <%= form_for :session, url: login_path do |f| %>
+              <div class="wrap-input100 validate-input m-b-18">
+                <%= f.label :username, class: "label-input100" %>
+                <%= f.text_field :username, class: "input100", placeholder: "Enter username" %>
+              </div>
+              <div class="wrap-input100 validate-input m-b-18">
+                <%= f.label :password, class: "label-input100" %>
+                <%= f.text_field :password, class: "input100", placeholder: "Enter password" %>
+              </div>
+              <div class="flex-sb-m w-full p-b-30">
+                <div>
+                  <a href="#" class="txt1">
+                    Forgot Password?
+                  </a>
+                </div>
+                <div>
+                  <a href="signup" class="txt1">
+                    Sign Up
+                  </a>
+                </div>
+              </div>
+              <div class="container-login100-form-btn">
+                <%= f.submit "Login", class: "login100-form-btn" %>
+              </div>
+            <%end%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

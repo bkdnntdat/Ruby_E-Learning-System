@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+<%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<!-- Custom Theme files -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--header start here-->
+<div class="header">
+	<div class="container">
+		 <div class="header-main">
+			<div class="top-menu marginMe">					
+					<ul>
+						<li ><a href="home">Home</a> </li>
+						<li ><a href="about.html">About  </a> </li>
+						<li><a href="typo.html">Short Codes</a></li>
+						<li><a href="galley.html">Gallery </a></li>
+						<li><a href="users/:user_id">Contact</a></li>
+						<li><div class="header-login">
+									 <div class="top-nav-right">
+										<div id="loginContainer"> <a href="#" id="loginButton"><span>Xin Chào Admin</span></a>
+											    <div id="loginBox">                
+									        	</div>
+									  </div>
+								   </div>
+		                         </div>
+		                </li>
+						<li><%= link_to "Logout", logout_path, :method => :delete%></li>
+					</ul>
+				</div>
+					<!--script-->
+			<div class="bann-bottom">
+				<h1 style="color: bisque; font-size: 62px;">Tự học để phát triển năng lực và phẩm chất</h1>
+				<p style="color: bisque; font-size: 20px; margin-top: 28px;">Học, Học nữa, Học mãi</p>
+				<div class="bann-main">
+					<div class="col-md-4 bann-grid">
+						<%= image_tag("i1.png") %>
+						<h4>Porro Neque</h4>
+					</div>
+					<div class="col-md-4 bann-grid">
+							<%= image_tag("i2.png") %>
+						<h4>Porro Neque</h4>
+					</div>
+					<div class="col-md-4 bann-grid">
+							<%= image_tag("i3.png") %>
+						<h4>Porro Neque</h4>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		 </div>
+	 </div>
+   </div>
+</div>
+<!--header end here-->
+<!--baner-info start here-->
+<div class="banner-info headerMe">			
+	<div class="container">
+		<div class="banner-info-main">
+			<div class="col-md-12 bann-info-left borderMe">
+				<p><strong style="font-size: 30px; color: antiquewhite;">CATEGORY</strong></p>
+				<table class="table table-dark table-striped">
+				    <thead>
+				      <tr>
+				        <th>STT</th>
+				        <th>Name</th>
+				        <th>Language</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>1</td>
+				        <td>Cây Cối</td>
+				        <td>English</td>
+				      </tr>
+				      <tr>
+				        <td>2</td>
+				        <td>Động Vật</td>
+				        <td>Japanese</td>
+				      </tr>
+				      <tr>
+				        <td>3</td>
+				        <td>Xe cộ</td>
+				        <td>Vietnamese</td>
+				      </tr>
+				    </tbody>
+				  </table>
+			</div>
+		  <div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--banner-info end here-->
+<!--testimonal start here-->
+<!--banner-info end here-->
+<!--testimonal start here-->
+</body>
+</html>
