@@ -2,10 +2,6 @@
 <html>
 <head>
 <title>Home</title>
-<!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-jQuery (necessary for Bootstrap's JavaScript plugins)
-Custom Theme files
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/> -->
 <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -23,11 +19,11 @@ Custom Theme files
 		 <div class="header-main">
 			<div class="top-menu marginMe">					
 					<ul>
-						<li ><a href="index.html">Home</a> </li>
+						<li ><a href="home">Home</a> </li>
 						<li ><a href="about.html">About  </a> </li>
 						<li><a href="typo.html">Short Codes</a></li>
 						<li><a href="galley.html">Gallery </a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="users/:user_id">Contact</a></li>
 						<li><div class="header-login">
 									 <div class="top-nav-right">
 										<div id="loginContainer"> <a href="#" id="loginButton"><span>Xin Chào Admin</span></a>
