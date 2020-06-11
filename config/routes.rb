@@ -7,12 +7,14 @@ Rails.application.routes.draw do
 
   root :to => "home#index"
   
-  get "signup" => "users#new"
+  get   "signup" => "users#new"
 
-  get "home" => "home#index"
+  get   "home" => "home#index"
 
-  get     "login"    => "sessions#new"
-  post    "login"    => "sessions#create"
-  get  "logout"   => "sessions#destroy"
+  get   "login"    => "sessions#new"
+  post  "login"    => "sessions#create"
+  get   "logout"   => "sessions#destroy"
+
+  get   "categories/:id/words" => "categories#get_words"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

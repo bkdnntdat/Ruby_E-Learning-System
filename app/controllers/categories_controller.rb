@@ -61,6 +61,11 @@ class CategoriesController < ApplicationController
     end
   end
 
+  #GET /categories/1/words
+  def get_words
+    @words = Category.find(params[:id]).words.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_category
