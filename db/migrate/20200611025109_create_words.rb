@@ -1,7 +1,7 @@
 class CreateWords < ActiveRecord::Migration[6.0]
   def change
     create_table :words do |t|
-      t.string :word
+      t.string :word, unique: true
       t.string :mean
       t.string :diction
       t.integer :category_id

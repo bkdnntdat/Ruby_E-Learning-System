@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UserWordRelationshipTest < ActiveSupport::TestCase
+class UsersWordTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

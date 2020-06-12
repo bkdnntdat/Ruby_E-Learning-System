@@ -1,0 +1,17 @@
+<h1>New Assessment</h1>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <%= @categories.each do |u| %>
+      <p class="dropdown-item"><%= u.name%></p>
+    <%end%>
+  </div>
+</div>
+
+<%= @questions.each do |question| %>
+      <p class="dropdown-item"><%= question.question%></p>
+<%end%>
+<%= render 'form', assessment: @assessment %>
+<%= link_to 'Back', assessments_path %>

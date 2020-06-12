@@ -1,0 +1,17 @@
+<h1>New Question</h1>
+<%= form_for @question, url: questions_path do |u| %>
+  <div class="wrap-input100 validate-input m-b-18">
+    <%= u.label :question, class: "label-input100" %>
+    <%= u.text_field :question, class: "input100", placeholder: "Enter question" %>
+  </div>
+  <div class="wrap-input100 validate-input m-b-18">
+    <%= u.label :category_id, class: "label-input100" %>
+    <%= u.text_field :category_id, class: "input100", placeholder: "Enter category id" %>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+      <%= u.text_field :justOneCorrectOption, class: "form-check-input", type: "checkbox"%>
+    </label>
+  </div>
+  <%= u.submit "Create", class: "login100-form-btn"%>
+<% end %>

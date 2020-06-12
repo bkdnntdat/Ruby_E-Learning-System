@@ -4,10 +4,10 @@ one:
   user_id: 1
   assessment_id: 1
   question_id: 1
-  choosedOption_id: 1
+  option_id: 1
 
 two:
   user_id: 1
   assessment_id: 1
   question_id: 1
-  choosedOption_id: 1
+  option_id: 1

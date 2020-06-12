@@ -1,6 +1,41 @@
 class WordsController < ApplicationController
   before_action :set_word, only: [:show, :edit, :update, :destroy]
 
+  def add_learned_word   
+    respond_to do |format|   
+      @word = Word.find_by(id: params[:word][:id])
+      if !@word.nil?
+        if current_user.words.include?(@word)
+          if params[:word][:option] == "add"
+            notice_message = 1
+            format.js { render :action => "add_learnt_word_notice" }
+            format.json { render :json => { status: "error", msg: "This word has already been in your list!" } }
+          else
+            current_user.words.delete(@word)
+            format.js { }
+            format.json { render :json => { status: :ok } }
+          end
+        else
+          if params[:word][:option] == "add"
+            current_user.words << @word
+            @user_word = UsersWord.joins('users').where("user_id =?", current_user.id).where("word_id =?", @word.id).first
+            @user_word.update_attributes(:learned => "true")
+            format.js { }
+            format.json { render :json => { status: :ok } }
+          else
+            notice_message = 2
+            format.js { render :action => "add_learnt_word_notice" }
+            render :json => { status: :error, msg: "Word is not in your list!" }
+          end
+        end
+      else
+        notice_message = 3
+        format.js { render :action => "add_learnt_word_notice" }   
+        render :json => { status: :error, msg: "Word does not exist!" }
+      end
+    end
+  end
+
   # GET /words
   # GET /words.json
   def index
@@ -64,7 +99,8 @@ class WordsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_word
-      @word = Word.find(params[:id])
+      @word = Word.where(category_id: :id).first
+      # @word = Word.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

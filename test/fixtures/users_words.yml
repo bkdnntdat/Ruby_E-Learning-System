@@ -3,9 +3,11 @@
 one:
   user_id: 1
   word_id: 1
-  type: 
+  learned: false
+  liked: false
 
 two:
   user_id: 1
   word_id: 1
-  type: 
+  learned: false
+  liked: false
